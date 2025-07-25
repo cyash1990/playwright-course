@@ -37,7 +37,7 @@ export class ProductsPage {
 
     sortByCheapest= async () => {
         await this.sortDropdown.waitFor()
-        //get order of products
+        //get order of product
         await this.productTitle.first().waitFor()
         const productTitlesBeforeSorting = await this.productTitle.allInnerTexts()
         await this.sortDropdown.selectOption("price-asc")
